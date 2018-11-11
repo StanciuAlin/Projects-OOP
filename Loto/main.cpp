@@ -5,6 +5,8 @@
 #include "ball.h"
 #include "Lotto_Agency.h"
 
+
+
 using namespace std;
 
 int main()
@@ -104,6 +106,5 @@ int main()
 			break;
 		}
 	} while (1);
-
 	return 0;
 }
