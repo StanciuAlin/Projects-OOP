@@ -1,3 +1,4 @@
+#pragma once
 #include <cstdlib>
 #include <vector>
 #include <algorithm>
@@ -12,12 +13,7 @@ class ball
 {
 public:
 	int value;
-	int status_ball;
-	enum status
-	{
-		extracted,
-		unextracted
-	};
+	bool status_ball; //1 - extracted and 0 - unextracted
 	
 	ball();
 	~ball();
@@ -26,7 +22,9 @@ public:
 private:
 	
 };
-
-void create_loto_balls(std::vector<ball> &loto_balls, int number_balls);
-void generate_6_balls(HANDLE hConsole, std::vector<ball> &loto_balls, int& number_balls);
+//construct all balls with value in range [1, 49]
+void create_loto_balls(std::vector<ball> &loto_balls);
+//generate randomly 6 balls
+std::vector<int> generate_6_balls(std::vector<ball>& loto_balls);
+//generate randomly value in range [1,dom_max]
 inline int gen(int dom_max) { return rand() % dom_max + 1; }
