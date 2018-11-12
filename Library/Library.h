@@ -15,8 +15,8 @@ public:
 	int Search_by_title(std::string title);
 	int Search_by_publishing(std::string publishing);
 	int Search_by_ISBN(Standard_ISBN _ISBN);
+	bool check_unicity_ISBN(Standard_ISBN _ISBN);
 
 private:
 	std::vector<book> library_books;
-	static int number_books;
 };
